@@ -6,10 +6,10 @@ class Dog:
         self.age = age
 
     def __str__(self):
-        return f'{self.breed} puppy named {self.name}.'
-    
+        return f"{self.breed} puppy named {self.name}."
+
     def sleep(self):
-        print('zzzzzz.......')
+        print("zzzzzz.......")
 
 
 class GuardDog(Dog):
@@ -19,7 +19,8 @@ class GuardDog(Dog):
         self.aggressive = True
 
     def rrrrr(self):
-        print('Stay away!')
+        print("Stay away!")
+
 
 class Puppy(Dog):
 
@@ -28,17 +29,17 @@ class Puppy(Dog):
         self.spoiled = True
 
     def woof(self):
-        print('Woof Woof!')
+        print("Woof Woof!")
 
     def introduce(self):
         self.woof()
-        print(f'My name is {self.name} and I am a baby {self.breed}')
+        print(f"My name is {self.name} and I am a baby {self.breed}")
         self.woof()
 
 
-doge = Puppy(name='Doge', breed='Beagle')
-bibi = Puppy(name='Bibi', breed='Dalmatian')
-oops = GuardDog(name='Oops', breed='Jindo')
+doge = Puppy(name="Doge", breed="Beagle")
+bibi = Puppy(name="Bibi", breed="Dalmatian")
+oops = GuardDog(name="Oops", breed="Jindo")
 
 print(doge)
 print(bibi)
