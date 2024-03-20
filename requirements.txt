@@ -4,11 +4,15 @@ certifi==2024.2.2
 charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
+greenlet==3.0.3
 idna==3.6
 mypy-extensions==1.0.0
 packaging==24.0
 pathspec==0.12.1
 platformdirs==4.2.0
+playwright==1.42.0
+pyee==11.0.1
 requests==2.31.0
 soupsieve==2.5
+typing_extensions==4.10.0
 urllib3==2.2.1
