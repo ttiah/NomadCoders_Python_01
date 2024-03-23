@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <li><strong>Bigadmin Job Scraper</strong></li>
+    </ul>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {% for keyword in keywords %}
+        <li><a href="/search?keyword={{ keyword }}">{{ keyword }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+<hr>

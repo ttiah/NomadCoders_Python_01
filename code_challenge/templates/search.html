@@ -1,47 +1,26 @@
-<!DOCTYPE html>
-<html lang="ko" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search | Job Scraper</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.lime.min.css"/>
-</head>
-<body>
-<main class="container">
-    <nav>
-        <ul>
-            <li><strong>Acme Corp</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Products</a></li>
-        </ul>
-    </nav>
-    <hr>
-    <h1>Search Results for "{{ keyword }}":</h1>
-    <div class="overflow-auto">
-    <table class="striped">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Company</th>
-                <th>Reward</th>
-                <th>Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for job in jobs %}
-            <tr>
-                <td><small>{{ job.title }}</small></td>
-                <td><small>{{ job.company }}</small></td>
-                <td><small>{{ job.reward }}</small></td>
-                <td><small><a href="{{ job.link }}" target="_blank">Apply now &rarr;</a></small></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    </div>
-</main>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block body %}
+<h1>Search Results for "{{ keyword }}":</h1>
+<div class="overflow-auto">
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for job in jobs %}
+        <tr>
+            <td><small>{{ job.title }}</small></td>
+            <td><small>{{ job.company }}</small></td>
+            <td><small>{{ job.description }}</small></td>
+            <td><small><a href="{{ job.link }}" target="_blank">Apply now &rarr;</a></small></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock body %}
